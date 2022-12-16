@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/menuIcons">
+        <file>icons/about.png</file>
+        <file>icons/close.png</file>
+        <file>icons/commonSettings.png</file>
+        <file>icons/dataBase.png</file>
+        <file>icons/help.png</file>
+        <file>icons/mainIcon.png</file>
+        <file>icons/net.png</file>
+        <file>icons/products.png</file>
+        <file>icons/reports.png</file>
+        <file>icons/runScheduale.png</file>
+        <file>icons/scheduale.png</file>
+        <file>icons/pauseScheduale.png</file>
+        <file>icons/active.png</file>
+        <file>icons/stopped.png</file>
+        <file>icons/add.png</file>
+        <file>icons/delete.png</file>
+        <file>icons/edit.png</file>
+        <file>icons/upload.png</file>
+    </qresource>
+</RCC>

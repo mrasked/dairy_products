@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>productsWindow</class>
+ <widget class="QMainWindow" name="productsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Редактор продукции</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3" stretch="10,1">
+    <item>
+     <widget class="QListWidget" name="listWidget"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="iImportPushButton">
+          <property name="text">
+           <string>Импорт из файла</string>
+          </property>
+          <property name="icon">
+           <iconset resource="Pictures.qrc">
+            <normaloff>:/menuIcons/icons/mainIcon.png</normaloff>:/menuIcons/icons/mainIcon.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="exportPushButton">
+          <property name="text">
+           <string>Экспорт в файл</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>icons/upload.png</normaloff>icons/upload.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="importFromDBPushButton">
+          <property name="text">
+           <string>Импорт из базы данных</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>icons/dataBase.png</normaloff>icons/dataBase.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="insertPushButton">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Pictures.qrc">
+              <normaloff>:/menuIcons/icons/add.png</normaloff>:/menuIcons/icons/add.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="changePushButton">
+            <property name="text">
+             <string>Изменить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Pictures.qrc">
+              <normaloff>:/menuIcons/icons/edit.png</normaloff>:/menuIcons/icons/edit.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="deletePushButton">
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Pictures.qrc">
+              <normaloff>:/menuIcons/icons/delete.png</normaloff>:/menuIcons/icons/delete.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="OkPushButton">
+            <property name="text">
+             <string>OK</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="Pictures.qrc"/>
+ </resources>
+ <connections/>
+</ui>

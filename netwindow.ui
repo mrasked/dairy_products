@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>netWindow</class>
+ <widget class="QMainWindow" name="netWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Сетевое взаимодействие с оборудованием</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="10,5,1">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Управление сервером</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,10">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="startServerPushButton">
+           <property name="text">
+            <string>Включить опрос оборудования</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Pictures.qrc">
+             <normaloff>:/menuIcons/icons/active.png</normaloff>:/menuIcons/icons/active.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="stopServerPushButton">
+           <property name="text">
+            <string>Выключить опрос оборудования</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Pictures.qrc">
+             <normaloff>:/menuIcons/icons/stopped.png</normaloff>:/menuIcons/icons/stopped.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>Настройки сервера</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Номер порта:    </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="portNumberLineEdit">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>50</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>7777</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="anyIPCheckBox">
+            <property name="text">
+             <string>Разрешить подключение клиентов с произвольным адресом</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>30</number>
+            </property>
+            <item>
+             <widget class="QListWidget" name="allowedIPListWidget"/>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <property name="spacing">
+               <number>4</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="addIPPushButton">
+                <property name="text">
+                 <string>Добавить IP контроллера</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Pictures.qrc">
+                  <normaloff>:/menuIcons/icons/add.png</normaloff>:/menuIcons/icons/add.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="deleteIPPushButton">
+                <property name="text">
+                 <string>Удалить IP контроллера</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Pictures.qrc">
+                  <normaloff>:/menuIcons/icons/delete.png</normaloff>:/menuIcons/icons/delete.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>Тестирование и статистика</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <property name="spacing">
+          <number>30</number>
+         </property>
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QListWidget" name="addedIPListWidget"/>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>4</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="testIPPushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>165</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Тестировать подключение</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="statisticIPPushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>165</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Статисика подключения</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="OK">
+        <property name="text">
+         <string>ОК</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Close">
+        <property name="text">
+         <string>Закрыть</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="Pictures.qrc"/>
+ </resources>
+ <connections/>
+</ui>

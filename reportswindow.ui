@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReportsWindow</class>
+ <widget class="QMainWindow" name="ReportsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>532</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Список отчётов</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Pictures.qrc">
+    <normaloff>:/menuIcons/icons/reports.png</normaloff>:/menuIcons/icons/reports.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTabWidget" name="ReportTypeTabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="tabBarAutoHide">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="shiftTab">
+          <attribute name="title">
+           <string>Смена</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_37" stretch="3,12">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_32">
+               <property name="text">
+                <string>Счетчик:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="shiftTabCounterComboBox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="shiftTabTypeReportTableView"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_33">
+             <property name="text">
+              <string>Формировать отчет за смену:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_34" stretch="0,0,0">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QComboBox" name="shiftTabShiftComboBox">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Утренняя</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Дневная</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Вечерняя</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Ночная</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_35">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>20</number>
+               </property>
+               <item>
+                <widget class="QDateEdit" name="ShiftTabFromDateEdit">
+                 <property name="calendarPopup">
+                  <bool>true</bool>
+                 </property>
+                 <property name="date">
+                  <date>
+                   <year>2012</year>
+                   <month>1</month>
+                   <day>1</day>
+                  </date>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_32">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="dayTab">
+          <attribute name="title">
+           <string>Сутки</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_33" stretch="3,12">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_28">
+               <property name="text">
+                <string>Счетчик:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="dayTabCounterComboBox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="dayTabTypeReportTableView"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_29">
+             <property name="text">
+              <string>Формировать отчет за сутки:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_30" stretch="0,0">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_31">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>20</number>
+               </property>
+               <item>
+                <widget class="QDateEdit" name="dayTabFromDateEdit">
+                 <property name="calendarPopup">
+                  <bool>true</bool>
+                 </property>
+                 <property name="date">
+                  <date>
+                   <year>2012</year>
+                   <month>1</month>
+                   <day>1</day>
+                  </date>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_28">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="monthTab">
+          <attribute name="title">
+           <string>Месяц</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="3,12">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_24">
+               <property name="text">
+                <string>Счетчик:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="monthTabCounterComboBox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="monthTabTypeReportTableView"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>Формировать отчет за месяц:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="0,0,0,0">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QComboBox" name="monthTabMonthComboBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>90</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="toolTipDuration">
+                <number>-1</number>
+               </property>
+               <property name="accessibleName">
+                <string/>
+               </property>
+               <property name="currentText">
+                <string>Январь</string>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <property name="maxVisibleItems">
+                <number>6</number>
+               </property>
+               <property name="modelColumn">
+                <number>0</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Январь</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Февраль</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Март</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Апрель</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Май</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Июнь</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Июль</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Август</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Сентябрь</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Октябрь</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Ноябрь</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Декабрь</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="monthTabSpinBox">
+               <property name="minimum">
+                <number>2000</number>
+               </property>
+               <property name="maximum">
+                <number>2050</number>
+               </property>
+               <property name="value">
+                <number>2012</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_15">
+               <property name="text">
+                <string>года</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_16">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="quarterTab">
+          <attribute name="title">
+           <string>Квартал</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_25" stretch="3,12">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_20">
+               <property name="text">
+                <string>Счетчик:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="quarterTabCounterComboBox_5"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="quarterTabTypeReportTableView"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>Формировать отчет за квартал:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="0,0,0,0">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QComboBox" name="yearTabQuarterComboBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="currentText">
+                <string>I</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string extracomment="январь, февраль, март">I</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string extracomment="апрель, май, июнь">II</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string extracomment="июль, август, сентябрь">III</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string extracomment="октябрь, ноябрь, декабрь">IV</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="yearTabSpinBox_2">
+               <property name="minimum">
+                <number>2000</number>
+               </property>
+               <property name="maximum">
+                <number>2050</number>
+               </property>
+               <property name="value">
+                <number>2012</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_14">
+               <property name="text">
+                <string>года</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_15">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="yearTab">
+          <attribute name="title">
+           <string>Год</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="3,12">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_16">
+               <property name="text">
+                <string>Счетчик:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="yearTabCounterComboBox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="yearTabTypeReportTableView"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Формировать отчет за год:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="0,0">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QSpinBox" name="yearTabSpinBox">
+               <property name="minimum">
+                <number>2000</number>
+               </property>
+               <property name="maximum">
+                <number>2050</number>
+               </property>
+               <property name="value">
+                <number>2012</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_14">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="periodTab">
+          <attribute name="title">
+           <string>Период</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,12">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Счетчик:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="periodTabCounterComboBox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="periodTabTypeReportTableView"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Формировать отчет за период:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,10,0,1,0,10">
+             <property name="leftMargin">
+              <number>30</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>От</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>20</number>
+               </property>
+               <property name="rightMargin">
+                <number>20</number>
+               </property>
+               <item>
+                <widget class="QDateEdit" name="periodTabFromDateEdit">
+                 <property name="calendarPopup">
+                  <bool>true</bool>
+                 </property>
+                 <property name="date">
+                  <date>
+                   <year>2012</year>
+                   <month>1</month>
+                   <day>1</day>
+                  </date>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QTimeEdit" name="periodTabFromTimeEdit">
+                 <property name="displayFormat">
+                  <string>h:mm</string>
+                 </property>
+                 <property name="calendarPopup">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>до</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>20</number>
+               </property>
+               <property name="rightMargin">
+                <number>20</number>
+               </property>
+               <item>
+                <widget class="QDateEdit" name="periodTabToDateEdit">
+                 <property name="calendarPopup">
+                  <bool>true</bool>
+                 </property>
+                 <property name="date">
+                  <date>
+                   <year>2012</year>
+                   <month>1</month>
+                   <day>1</day>
+                  </date>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QTimeEdit" name="periodTabToTimeEdit">
+                 <property name="displayFormat">
+                  <string>h:mm</string>
+                 </property>
+                 <property name="time">
+                  <time>
+                   <hour>23</hour>
+                   <minute>59</minute>
+                   <second>0</second>
+                  </time>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Выполнено:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="ReportProgressBar">
+            <property name="value">
+             <number>24</number>
+            </property>
+            <property name="textVisible">
+             <bool>false</bool>
+            </property>
+            <property name="invertedAppearance">
+             <bool>false</bool>
+            </property>
+            <property name="textDirection">
+             <enum>QProgressBar::TopToBottom</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <property name="leftMargin">
+          <number>30</number>
+         </property>
+         <property name="rightMargin">
+          <number>30</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="5,1">
+           <item>
+            <widget class="QPushButton" name="SelectedGroupPushButton">
+             <property name="text">
+              <string>Группа - выбрано (0)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="text">
+              <string>PDF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="pathExampleLineEdit">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QPushButton" name="CancelPushButton">
+             <property name="text">
+              <string>Отмена</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="CreatePushButton">
+             <property name="text">
+              <string>Формировать</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>532</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="Pictures.qrc"/>
+ </resources>
+ <connections/>
+</ui>
